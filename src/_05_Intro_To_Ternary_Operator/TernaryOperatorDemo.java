@@ -41,16 +41,16 @@ public class TernaryOperatorDemo {
          * 4. Surround the previous parts with a do while loop and continue
          * until the response says "FIRE!".
          */
-        String season;
+        String season = "";
         
         do {
         	Scanner scanner = new Scanner(System.in);
         	System.out.println("What season is it?");
         	season = scanner.next();
         
-        	season = season == "duck season" ? "FIRE!" : "rabbit season";
+        	season = season.contentEquals("duck season") ? "FIRE!" : "rabbit season";
         	System.out.println(season);
-        } while (season != "FIRE!");
+        } while (!season.contentEquals("FIRE!"));
         /*
          * WARNING: Ternary operators can be used to improve the readability of
          * your code if used sparingly for very simple if/else statements.
