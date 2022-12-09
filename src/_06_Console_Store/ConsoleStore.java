@@ -41,18 +41,16 @@ public class ConsoleStore {
 	 */
 
 	public static void main(String[] args) {
-		Cart<Clothing> clothingCart = new Cart<Clothing>();
-		Cart<Toy> toyCart = new Cart<Toy>();
+		Cart<Item> electronicsCart = new Cart<Item>();
 
-		clothingCart.add(new Clothing());
-		clothingCart.add(new Clothing());
-		clothingCart.add(new Clothing());
-		toyCart.add(new Toy());
-		toyCart.add(new Toy());
-		toyCart.add(new Toy());
+		electronicsCart.add(new Item());
+		electronicsCart.add(new Item());
+		electronicsCart.add(new Item());
+		electronicsCart.add(new Item());
+		electronicsCart.add(new Item());
+		electronicsCart.add(new Item());
 
-		clothingCart.showCart();
-		toyCart.showCart();
+		electronicsCart.showCart();
 	}
 
 }

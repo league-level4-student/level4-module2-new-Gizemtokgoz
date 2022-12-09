@@ -12,14 +12,13 @@ import javax.swing.JPanel;
  */
 
 @SuppressWarnings("unchecked")
-public class Cart<T extends Food> {
+public class Cart<T extends Item> {
 	private T[] cart;
 
 	public Cart() {
-		cart = (T[]) new Food[5];
+		cart = (T[]) new Item[5];
 	}
 
-	// Adds an item to the cart
 	public void add(T item) {
 		for (int i = 0; i < cart.length; i++) {
 			if (cart[i] == null) {
@@ -30,7 +29,6 @@ public class Cart<T extends Food> {
 		JOptionPane.showMessageDialog(null, "Your cart is full!\nNo more than 5 items");
 	}
 
-	// Displays everything currently in the cart
 	public void showCart() {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
@@ -40,7 +38,7 @@ public class Cart<T extends Food> {
 
 		for (int i = 0; i < cart.length; i++) {
 			if (cart[i] != null) {
-				panel.add(cart[i].getFood());
+				panel.add(cart[i].getItem());
 			}
 		}
 		frame.pack();
